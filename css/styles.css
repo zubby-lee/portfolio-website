@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #0d0d0d;
+    background: #000000;
     color: #fff;
     line-height: 1.6;
 }
@@ -120,7 +120,7 @@ nav a:hover {
 }
 
 .skill-group {
-    background: #111;
+    background: #292929;
     padding: 25px;
     border-radius: 10px;
     transition: 0.3s;
@@ -166,6 +166,7 @@ nav a:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
+    background: #292929;
 }
 
 .project-image img {
