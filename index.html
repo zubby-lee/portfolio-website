@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZUBBY | Portfolio</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,8 +36,9 @@
     <section id="home">
         <div class="hero-content">
             <h1>Nzubechukwu Egwu</h1>
-            <p>Web Developer in Training...</p>
+            <p>Web Developer in Training... My background in psychology and business helps me create solutions that are functional, accessible, and human-centered.</p>
             <a href="#projects" class="cta-btn">View My Work</a>
+            <a href="#" download class="cta-btn-secondary">Download Resume</a>
         </div>
         
     </section>
@@ -64,18 +71,20 @@
             <div class="skill-group">
                 <h4>Front-End</h4>
                 <ul>
-                    <li><i class="fa-brands fa-html5"></i>HTML5</li>
-                    <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
-                    <li><i class="fa-brands fa-tailwind-css"></i>Tailwind CSS</li>
+                    <li><i class="fa-brands fa-html5"></i>  HTML5</li>
+                    <li><i class="fa-brands fa-css3-alt"></i>  CSS</li>
+                    <li><i class="fa-brands fa-tailwind-css"></i>  Tailwind CSS</li>
+                    <li><i class="fa-brands fa-square-js"></i>  JavaScript</li>
                 </ul>
             </div>
 
             <div class="skill-group">
                 <h4>Tools</h4>
                 <ul>
-                    <li><i class="fa-brands fa-github"></i> GitHub</li>
-                    <li><i class="fa-brands fa-git-alt"></i> Git</li>
-                    <li><i class="fa-brands fa-vscode"></i> VS Code</li>
+                    <li><i class="fa-brands fa-github"></i>  GitHub</li>
+                    <li><i class="fa-brands fa-git-alt"></i>  Git</li>
+                    <li><i class="fa-brands fa-vscode"></i>  VS Code</li>
+                    <li><i class="fa-brands fa-ai"></i>  Ai Tools</li>
                 </ul>
             </div>
         </div>
@@ -83,7 +92,7 @@
 
     <!-- projects -->
     <section id="projects">
-        <h2>What I've Built</h2>
+        <h2>What I've Built So Far</h2>
 
         <div class="projects-container">
             <div class="project-card">
@@ -93,32 +102,40 @@
                     <img src="images/school-news-portal.jpg">
                 </div>
                 <p>Technologies used: HTML, CSS</p>
+                <button>View Project</button>
+                <button>Source Code</button>
             </div>
 
             <div class="project-card">
                 <h3>Travel Agency Website</h3>
-                <p>Built a responsive website for a travel agency to showcase their services and packages.</p>
+                <p>I lead a team that built a responsive website for a travel agency to showcase their services and packages.</p>
                  <div class="project-image">
                     <img src="images/travel-agency.png">
                 </div>
                 <p>Technologies used: HTML, CSS,</p>
+                <button>View Project</button>
+                <button>Source Code</button>
             </div>
 
             <div class="project-card">
                 <h3>E-commerce Store (In Progress)</h3>
-                <p>This project is an online store for selling products with a focus on user experience and seamless checkout.</p>
+                <p>Curently building an online store for selling products with a focus on user experience and seamless checkout.</p>
                  <div class="project-image">
-                    <img src="images/illustration-image.png">
+                    <img src="images/ecomm.jfif">
                 </div>
                 <p>Technologies used: HTML, CSS, JavaScript</p>
+                <button>View Project</button>
+                <button>Source Code</button>
             </div>
 
             <div class="project-card">
-                <h3>Restaurant Website (Coming Soon)</h3>
-                <p>This project is a modern website for displaying the restaurant's menu, location, and contact information.</p>
+                <h3>Hotel Booking (Coming Soon)</h3>
+                <p>This project is a modern website for a hotel, showcasing their services and offering customers the chance to book rooms, view amenities, and contact the hotel directly.</p>
                  <div class="project-image">
-                    <img src="images/illustration-image.png">
+                    <img src="images/hotel.jfif">
                 </div>
+                <button>View Project</button>
+                <button>Source Code</button>
             </div>
         </div>
     </section>
@@ -150,13 +167,13 @@
 
             <form class="contact-form">
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="First name... Last name..." required>
+                <input type="text" id="name" name="name" placeholder="First name... Last name..." required>
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="exmaple@email.com" required>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" placeholder="Enter your message..." rows="5" required></textarea>
+                <textarea id="message" name="message" placeholder="Enter your message..." rows="5" required></textarea>
 
                 <button type="submit">Send Message</button>
             </form>

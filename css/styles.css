@@ -70,6 +70,7 @@ nav a:hover {
 .hero-content {
     text-align: center;
     max-width: 600px;
+    margin-bottom: 80px;
 }
 .hero-content h1 {
     font-size: 3rem;
@@ -79,6 +80,10 @@ nav a:hover {
     margin: 15px 0;
 }
 
+.hero-content a {
+    margin: 5px;
+}
+
 .cta-btn {
     display: inline-block;
     padding: 12px 25px;
@@ -86,14 +91,35 @@ nav a:hover {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    border: 2px solid #c9edff;
+    transition: 0.3s;
+}
+
+.cta-btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: transparent;
+    color: #00aaff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #00aaff;
     transition: 0.3s;
 }
 
 .cta-btn:hover {
-    background: #008ecc;
+    background: #0079ad;
+}
+
+.cta-btn-secondary:hover {
+    background: #002535;
+    color: #fff;
 }
 
 /* about */
+#about {
+    background: #111;
+}
+
 .about-container {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
@@ -108,9 +134,14 @@ nav a:hover {
 }
 
 /* skills */
+#skills {
+    background: #5e5e5e;
+}
+
 #skills h2 {
     text-align: center;
     margin-bottom: 40px;
+    color: #ffffff;
 }
 
 .skills-container {
@@ -120,7 +151,7 @@ nav a:hover {
 }
 
 .skill-group {
-    background: #292929;
+    background: #969696;
     padding: 25px;
     border-radius: 10px;
     transition: 0.3s;
@@ -128,12 +159,12 @@ nav a:hover {
 
 .skill-group:hover {
     transform: translateY(-5px);
-    background: #1a1a1a;
+    background: #838383;
 }
 
 .skill-group h4 {
     margin-bottom: 15px;
-    color: #00aaff;
+    color: #000000;
 }
 
 .skill-group ul {
@@ -145,9 +176,19 @@ nav a:hover {
 }
 
 /* projects */
+#projects {
+    background: #5b6169;
+}
+
 #projects h2 {
     text-align: center;
     margin-bottom: 40px;
+    color: #ffffff;
+}
+
+#projects h3 {
+    margin: 15px 0;
+    color: #000000;
 }
 
 .projects-container {
@@ -157,7 +198,7 @@ nav a:hover {
 }
 
 .project-card {
-    background: #111;
+    background: #777777;
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -166,7 +207,7 @@ nav a:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
-    background: #292929;
+    background: #666666;
 }
 
 .project-image img {
@@ -176,10 +217,16 @@ nav a:hover {
 }
 
 /* contact */
+#contact {
+    background: #000000;
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    /* background: #2e2e2e;
+    padding: 50px; */
 }
 
 .contact-info a {
@@ -227,7 +274,7 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: #111;
+    background: #141414;
     font-size: 0.9rem;
     color: #aaa;
 }
