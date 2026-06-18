@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #000000;
+    /* background: #000000; */
     color: #fff;
     line-height: 1.6;
 }
@@ -20,20 +20,26 @@ h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
 }
 
+span {
+    color: #00aaff;
+}
+
+
 section {
-    padding: 80px 10%;
+    padding: 80px 8%;
 }
 
 /* nav */
 nav {
     position: sticky;
     top: 0;
-    background: #111;
+    background: #141414;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 12px 3%;
     z-index: 1000;
+
 }
 
 nav h2 {
@@ -48,7 +54,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #cccccccc;
     transition: 0.3s;
 }
 
@@ -56,9 +62,21 @@ nav a:hover {
     color: #00aaff;
 }
 
+.nav-social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
 /* home */
 #home {
-    height: 85vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,6 +96,8 @@ nav a:hover {
 
 .hero-content p {
     margin: 15px 0;
+    color: #cccccccc;
+    font-size: 1.2rem;
 }
 
 .hero-content a {
@@ -127,6 +147,11 @@ nav a:hover {
     align-items: center;
 }
 
+.about-text p {
+    color: #cccccccc;
+    font-size: 1.2rem;
+}
+
 .about-image img {
     width: 100%;
     border-radius: 10px;
@@ -135,7 +160,7 @@ nav a:hover {
 
 /* skills */
 #skills {
-    background: #5e5e5e;
+    background: #565d66;
 }
 
 #skills h2 {
@@ -146,25 +171,27 @@ nav a:hover {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
 .skill-group {
-    background: #969696;
+    background: #3a3a3a;
     padding: 25px;
     border-radius: 10px;
-    transition: 0.3s;
+    height: 250px;
 }
 
 .skill-group:hover {
     transform: translateY(-5px);
-    background: #838383;
+    background: #222222;
+    border-top: 5px solid #0079ad;
+    /* transition: 0.3s; */
 }
 
 .skill-group h4 {
     margin-bottom: 15px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .skill-group ul {
@@ -173,11 +200,12 @@ nav a:hover {
 
 .skill-group li {
     margin: 10px 0;
+    color: #cccccccc;
 }
 
 /* projects */
 #projects {
-    background: #5b6169;
+    background: #474957;
 }
 
 #projects h2 {
@@ -188,26 +216,38 @@ nav a:hover {
 
 #projects h3 {
     margin: 15px 0;
-    color: #000000;
+    color: #ffffff;
+}
+
+#projects a{
+    text-decoration: none;
+    color: black;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 
 .project-card {
-    background: #777777;
+    background: #444653;
     padding: 20px;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.3s;
+    min-height: 460px;
+    height: auto;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    background: #666666;
+    background: #373a46;
+    border-bottom: 5px solid #0079ad;
+}
+
+.project-card p {
+    color: #cccccccc;
 }
 
 .project-image img {
@@ -225,8 +265,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    /* background: #2e2e2e;
-    padding: 50px; */
 }
 
 .contact-info a {
@@ -291,9 +329,31 @@ footer {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     nav ul {
-        display: none; /* simple version (no hamburger yet) */
+        position: absolute;
+        top: 100%;
+        left: +100%;
+        width: 100%;
+        background: #141414;
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 0;
+        transition: 0.3s;
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #home {
+        padding: 0 20px;
+        text-align: center;
+
     }
 
     .about-container {
@@ -309,6 +369,16 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-btn, .cta-btn-secondary {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
     }
 }

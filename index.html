@@ -30,13 +30,22 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="nav-social-icons">
+            <a href="https://www.linkedin.com/in/nzubechukwu-egwu" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/nzubechukwu-egwu" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </nav>
 
     <!-- home -->
     <section id="home">
         <div class="hero-content">
             <h1>Nzubechukwu Egwu</h1>
-            <p>Web Developer in Training... My background in psychology and business helps me create solutions that are functional, accessible, and human-centered.</p>
+            <p>Web Developer in Training... I create solutions that are functional, accessible, and human-centered.</p>
             <a href="#projects" class="cta-btn">View My Work</a>
             <a href="#" download class="cta-btn-secondary">Download Resume</a>
         </div>
@@ -65,26 +74,42 @@
 
     <!-- skills -->
     <section id="skills">
-        <h2>My Skills</h2>
+        <h2>Technical <span>Skills</span> I Have Acquired So Far</h2>
 
         <div class="skills-container">
             <div class="skill-group">
-                <h4>Front-End</h4>
+                <h4>Tools</h4>
                 <ul>
-                    <li><i class="fa-brands fa-html5"></i>  HTML5</li>
-                    <li><i class="fa-brands fa-css3-alt"></i>  CSS</li>
-                    <li><i class="fa-brands fa-tailwind-css"></i>  Tailwind CSS</li>
-                    <li><i class="fa-brands fa-square-js"></i>  JavaScript</li>
+                    <li>GitHub  <i class="fa-brands fa-github"></i></li>
+                    <li>Git  <i class="fa-brands fa-git-alt"></i></li>
+                    <li>VS Code  <i class="fa-brands fa-vscode"></i></li>                    
                 </ul>
             </div>
 
             <div class="skill-group">
-                <h4>Tools</h4>
+                <h4>Front-End</h4>
                 <ul>
-                    <li><i class="fa-brands fa-github"></i>  GitHub</li>
-                    <li><i class="fa-brands fa-git-alt"></i>  Git</li>
-                    <li><i class="fa-brands fa-vscode"></i>  VS Code</li>
-                    <li><i class="fa-brands fa-ai"></i>  Ai Tools</li>
+                    <li>HTML5  <i class="fa-brands fa-html5"></i></li>
+                    <li>CSS  <i class="fa-brands fa-css3-alt"></i></li>
+                    <li>Tailwind CSS  <i class="fa-brands fa-tailwind-css"></i></li>
+                    <li>JavaScript  <i class="fa-brands fa-square-js"></i></li>
+                </ul>
+            </div>
+
+            <div class="skill-group">
+                <h4>Back-End</h4>
+                <ul>
+                    <li>Node.js  <i class="fa-brands fa-node-js"></i></li>
+                    <li>Python  <i class="fa-brands fa-python"></i> (Learning)</li>
+                    <li>PHP  <i class="fa-brands fa-php"></i> (Learning)</li>
+                </ul>
+            </div>
+
+            <div class="skill-group">
+                <h4>Ai</h4>
+                <ul>
+                    <li>NLP  <i class="fa-solid fa-robot"></i></li>
+                    <li>Prompt Engineering  <i class="fa-brands fa-openai"></i></li>
                 </ul>
             </div>
         </div>
@@ -92,7 +117,7 @@
 
     <!-- projects -->
     <section id="projects">
-        <h2>What I've Built So Far</h2>
+        <h2>Featured <span>Projects</span> </h2>
 
         <div class="projects-container">
             <div class="project-card">
@@ -102,8 +127,8 @@
                     <img src="images/school-news-portal.jpg">
                 </div>
                 <p>Technologies used: HTML, CSS</p>
-                <button>View Project</button>
-                <button>Source Code</button>
+                <button><a href="#" target="_blank">View Project</a></button>
+                <button><a href="#" target="_blank">Source Code</a></button>
             </div>
 
             <div class="project-card">
@@ -113,8 +138,8 @@
                     <img src="images/travel-agency.png">
                 </div>
                 <p>Technologies used: HTML, CSS,</p>
-                <button>View Project</button>
-                <button>Source Code</button>
+                <button><a href="#" target="_blank">View Project</a></button>
+                <button><a href="#" target="_blank">Source Code</a></button>
             </div>
 
             <div class="project-card">
@@ -124,8 +149,8 @@
                     <img src="images/ecomm.jfif">
                 </div>
                 <p>Technologies used: HTML, CSS, JavaScript</p>
-                <button>View Project</button>
-                <button>Source Code</button>
+                <button><a href="#" target="_blank">View Project</a></button>
+                <button><a href="#" target="_blank">Source Code</a></button>
             </div>
 
             <div class="project-card">
@@ -134,8 +159,8 @@
                  <div class="project-image">
                     <img src="images/hotel.jfif">
                 </div>
-                <button>View Project</button>
-                <button>Source Code</button>
+                <button><a href="#" target="_blank">View Project</a></button>
+                <button><a href="#" target="_blank">Source Code</a></button>
             </div>
         </div>
     </section>
@@ -185,6 +210,15 @@
     <footer>
         <p>&copy; 2026 Nzubechukwu Egwu. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
