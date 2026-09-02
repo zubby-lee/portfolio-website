@@ -1,26 +1,10 @@
-<!--
-  REFACTOR NOTES
-  - Significant: converted the page to semantic header/main/section/footer structure.
-  - Significant: replaced invalid/poor HTML patterns such as <button><a>...</a></button>
-    with accessible, styled links.
-  - Significant: added accessible labels and state attributes to the mobile navigation.
-  - Significant: added rel="noopener noreferrer" to target="_blank" links.
-  - Significant: added lazy loading/decoding hints to below-the-fold images.
-  - Significant: consolidated repeated project-card utilities into a Tailwind component
-    class in the Tailwind config.
-  - Recommended but not implemented: move Tailwind configuration into a build-based
-    Tailwind setup for production, rather than the CDN runtime compiler.
-  - Recommended but not implemented: extract repeated project cards into reusable
-    components if this portfolio grows substantially.
--->
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZUBBY | Portfolio</title>
+    <title>Zubby | Portfolio</title>
     <meta
         name="description"
         content="Zubby's portfolio — junior full-stack developer building responsive, accessible, and user-centered web experiences."
@@ -83,8 +67,8 @@
     </script>
 </head>
 
-<body class="bg-black font-body leading-relaxed text-white">
-    <!-- Improved: semantic header for site-wide navigation. -->
+<body class="font-body leading-relaxed text-white">
+
     <header class="sticky top-0 z-[1000] bg-navbg">
         <nav
             aria-label="Primary navigation"
@@ -92,10 +76,10 @@
         >
             <a
                 href="#hero"
-                class="font-heading text-accent"
+                class="font-heading text-body/80"
                 aria-label="Zubby home"
             >
-                NZUBECHUKWU.egwu
+                <span class="text-accent"> < </span>Nzubechukwu<span class="text-accent"> /> </span>
             </a>
 
             <ul
@@ -149,7 +133,7 @@
         <section
             id="hero"
             aria-labelledby="hero-title"
-            class="flex min-h-[90vh] items-center justify-between gap-12 bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('src/assets/images/illust.png')] bg-cover bg-center px-[8%] py-20 max-md:flex-col max-md:px-5 max-md:text-center"
+            class="flex min-h-[90vh] items-center justify-between gap-12 bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('src/assets/images/illust.png')] bg-cover bg-center px-[8%] py-20 max-md:flex-col max-md:px-5 max-md:text-center"
         >
             <div class="flex-1">
                 <p class="font-heading text-[1.5rem]">Hello, I'm</p>
@@ -188,7 +172,7 @@
 
                     <div class="space-y-5 text-lg text-body/80">
                         <p>
-                            I am a junior software developer with a growing passion for
+                            I am a junior full-stack & Ai engineer with a growing passion for
                             building practical, real-world web applications that solve
                             meaningful problems. With a background in Psychology and
                             Business, I bring a unique perspective to software development,
@@ -200,15 +184,14 @@
                             My journey into tech is driven by curiosity and a genuine desire
                             to understand how the digital products we use every day are
                             designed and built. Every project I undertake is an opportunity
-                            to strengthen my technical skills while gaining a deeper
-                            appreciation for the principles behind modern web development.
+                            to strengthen my technical skills while gaining a deeper understanding of what works and what doesn't.
                             What inspires me most about web development is its ability to
                             transform ideas into accessible solutions with global reach.
                         </p>
 
                         <p>
-                            As I continue to expand my expertise in front-end and back-end
-                            technologies, my goal is to become a well-rounded software
+                            As I continue to polish my expertise in front-end and back-end
+                            technologies, my goal is to become a well-rounded software & Ai
                             engineer capable of designing, developing, and deploying impactful
                             digital products. I am committed to continuous learning, embracing
                             new technologies, and contributing to projects that make a positive
@@ -280,7 +263,7 @@
         <!-- Projects -->
         <section id="projects" aria-labelledby="projects-title" class="bg-projectsbg px-[8%] py-20">
             <h2 id="projects-title" class="mb-10 text-center font-heading text-2xl text-white">
-                A Look at my <span class="text-accent">Featured Projects</span> While You Continue to Imagine The Things We Can Do...
+                Let's Take A Look At Some Of My <span class="text-accent">Featured Projects</span>
             </h2>
 
             <div class="grid grid-cols-3 gap-10 max-lg:grid-cols-1">
@@ -362,7 +345,7 @@
                 </article>
 
                 <article class="flex min-h-[460px] flex-col overflow-hidden rounded-[10px] bg-projectcard p-4 transition-colors duration-300 hover:border-t-[5px] hover:border-accent-dark hover:bg-projectcardhover">
-                    <h3 class="my-4 font-heading text-white">Microfinance - Website</h3>
+                    <h3 class="my-4 font-heading text-white">TT-Pay - Website</h3>
                     <img src="src/assets/images/microfinance.jpg" alt="Microfinance institution website" width="800" height="600" loading="lazy" decoding="async" class="w-full rounded-lg">
                     <p class="mt-3 text-body/80">A modern website for a microfinance institution to showcase their services and facilitate online applications.</p>
                     <p class="mt-3 text-body/80">Technologies used: HTML, CSS, JavaScript</p>
@@ -418,8 +401,8 @@
                             autocomplete="name"
                             placeholder="First name Last name"
                             required
-                            class="my-2.5 w-full rounded-[5px] border-2 border-transparent p-3 text-black outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
-                        >
+                            class="my-2.5 w-full rounded-[5px] border-2 border-white/20 bg-white p-3 text-black placeholder:text-gray-500 outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+                        />
                     </div>
 
                     <div>
@@ -431,19 +414,19 @@
                             autocomplete="email"
                             placeholder="example@email.com"
                             required
-                            class="my-2.5 w-full rounded-[5px] border-2 border-transparent p-3 text-black outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
-                        >
+                            class="my-2.5 w-full rounded-[5px] border-2 border-white/20 bg-white p-3 text-black placeholder:text-gray-500 outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+                        />
                     </div>
 
                     <div>
                         <label for="message" class="block mt-2">Message</label>
                         <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Enter your message..."
-                            rows="5"
-                            required
-                            class="my-2.5 w-full rounded-[5px] border-2 border-transparent p-3 text-black outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+                        id="message"
+                        name="message"
+                        placeholder="Enter your message..."
+                        rows="5"
+                        required
+                        class="my-2.5 w-full rounded-[5px] border-2 border-white/20 bg-white p-3 text-black placeholder:text-gray-500 outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
                         ></textarea>
                     </div>
 
